@@ -9,7 +9,7 @@ public class testCases {
 
     @Test
     public void test_setNFT() {
-        listOfNFTS nftList = new listOfNFTS();
+        ListOfNFTS nftList = new ListOfNFTS();
         nft n = new nft("Pirate Kitten", "Crypto Kitten", "piratekitten.jpg", "Common", 100);
         nft n2 = new nft("Gangster Monkey", "Space Monkeys", "gangstermonkey.jpg", "Legendary", 500);
         nft n3 = new nft("General Kitten", "Crypto Kitten", "generalkitten.jpg", "Epic", 250);
@@ -25,7 +25,7 @@ public class testCases {
 
     @Test
     public void test_sortCategory() {
-        listOfNFTS nftList = new listOfNFTS();
+        ListOfNFTS nftList = new ListOfNFTS();
         ArrayList listOfNFTS = new ArrayList();
         nft n = new nft("Pirate Kitten", "Crypto Kitten", "piratekitten.jpg", "Common", 100);
         nft n2 = new nft("Gangster Monkey", "Space Monkeys", "gangstermonkey.jpg", "Legendary", 500);
@@ -42,7 +42,7 @@ public class testCases {
 
     @Test
     public void test_sortCategoryDescending() {
-        listOfNFTS nftList = new listOfNFTS();
+        ListOfNFTS nftList = new ListOfNFTS();
         ArrayList listOfNFTS = new ArrayList();
         nft n = new nft("Pirate Kitten", "Crypto Kitten", "piratekitten.jpg", "Common", 100);
         nft n2 = new nft("Gangster Monkey", "Space Monkeys", "gangstermonkey.jpg", "Legendary", 500);
@@ -58,7 +58,7 @@ public class testCases {
 
     @Test
     public void test_sortName() {
-        listOfNFTS nftList = new listOfNFTS();
+        ListOfNFTS nftList = new ListOfNFTS();
         ArrayList listOfNFTS = new ArrayList();
         nft n = new nft("Pirate Kitten", "Crypto Kitten", "piratekitten.jpg", "Common", 100);
         nft n2 = new nft("Gangster Monkey", "Space Monkeys", "gangstermonkey.jpg", "Legendary", 500);
@@ -75,7 +75,7 @@ public class testCases {
 
     @Test
     public void test_sortNameDescending() {
-        listOfNFTS nftList = new listOfNFTS();
+        ListOfNFTS nftList = new ListOfNFTS();
         ArrayList listOfNFTS = new ArrayList();
         nft n = new nft("Pirate Kitten", "Crypto Kitten", "piratekitten.jpg", "Common", 100);
         nft n2 = new nft("Gangster Monkey", "Space Monkeys", "gangstermonkey.jpg", "Legendary", 500);
@@ -91,7 +91,7 @@ public class testCases {
 
     @Test
     public void test_sortRarity() {
-        listOfNFTS nftList = new listOfNFTS();
+        ListOfNFTS nftList = new ListOfNFTS();
         ArrayList listOfNFTS = new ArrayList();
         nft n = new nft("Pirate Kitten", "Crypto Kitten", "piratekitten.jpg", "Common", 100);
         nft n2 = new nft("Gangster Monkey", "Space Monkeys", "gangstermonkey.jpg", "Legendary", 500);
@@ -107,7 +107,7 @@ public class testCases {
 
     @Test
     public void test_sortRarityDescending() {
-        listOfNFTS nftList = new listOfNFTS();
+        ListOfNFTS nftList = new ListOfNFTS();
         ArrayList listOfNFTS = new ArrayList();
         nft n = new nft("Pirate Kitten", "Crypto Kitten", "piratekitten.jpg", "Common", 100);
         nft n2 = new nft("Gangster Monkey", "Space Monkeys", "gangstermonkey.jpg", "Legendary", 500);
@@ -119,8 +119,6 @@ public class testCases {
         assertEquals(n2, listOfNFTS.get(0));
         assertEquals(n3, listOfNFTS.get(1));
         assertEquals(n, listOfNFTS.get(2));
-
-
     }
 
 }
