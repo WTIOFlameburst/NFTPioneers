@@ -1,28 +1,39 @@
 package com.company;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
 
+    private int balance = 1000;
+    private int bank = 0;
+    private int dayCounter = 1;
+    ArrayList nftCollection = new ArrayList<nft>();
     public static void main(String[] args) {
-	    // Sample test object for change price
-        nft test = new nft();
-        test.setName("Gangster Monkey");
-        test.setCategory("Monkey");
-        test.setImageName("GangsterMonkey.jpg");
-        test.setRarity("Epic");
-        test.setPriceOfNFT(750);
-        int balance = 1000;
-        int dayCounter = 1;
-        while(balance != 5000){
-            System.out.println(String.format("Day (%d): Enter to continue", dayCounter));
-            dayCounter++;
-            Scanner in = new Scanner(System.in);
-            in.nextLine();
-            int currentPrice = test.getPriceOfNFT();
-            String rarity = test.getRarity();
-            test.changePrice(currentPrice, rarity);
-            int newPrice = test.getPriceOfNFT();
+    }
+
+    public void buyNFT (nft nft){
+        balance -= nft.getPriceOfNFT();
+        nftCollection.add(nft);
+    }
+
+    public void sellNFT (nft nft){
+        if (nftCollection.indexOf(nft) != -1){
+            balance += nft.getPriceOfNFT();
+            nftCollection.remove(nft);
+        }
+    }
+
+    public void dayCounter (int dayCounter){
+        dayCounter++;
+    }
+
+    public void newDay (){
+        for (int i = 0; i != nftCollection.size(); i++){
+            nft currentNFT = (nft) nftCollection.get(i);
+            double currentPrice = currentNFT.getPriceOfNFT();
+            String rarity = currentNFT.getRarity();
+            currentNFT.changePrice(currentPrice, rarity);
+            int newPrice = currentNFT.getPriceOfNFT();
             balance += newPrice;
-            System.out.println(String.format("Gangster Money Price: (%d)\n", newPrice));
         }
     }
 }
